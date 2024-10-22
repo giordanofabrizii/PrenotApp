@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Manager\ManagerController as ManagerController;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Controllers\Middleware as ControllersMiddleware;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,3 @@ Route::middleware('auth')->group(function () {
 
     // Route::resource('provaroute', ManagerController::class)
 });
-

@@ -5,6 +5,7 @@ use App\Http\Controllers\Manager\ManagerController as ManagerController;
 use App\Http\Controllers\Admin\AdminController as AdminController;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Controllers\Middleware as ControllersMiddleware;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,3 @@ Route::middleware('auth')->group(function () {
     Route::post('/create/category', [AdminController::class, 'storeCategory'])->name('admin.store.category');
     // Route::resource('provaroute', ManagerController::class)
 });
-
